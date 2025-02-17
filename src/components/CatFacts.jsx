@@ -24,7 +24,9 @@ const CatFacts = () => {
       .then((response) => response.json())
       .then((data) => {
         setCatFact(data.fact);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 1500);
       })
       .catch((error) => {
         setError(error.message);

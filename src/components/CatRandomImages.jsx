@@ -47,7 +47,7 @@ const CatRandomImages = () => {
     window.open(imageUrl, "_blank");
   };
   return (
-    <div className="grid grid-cols-5 gap-4 max-w-5xl mx-auto">
+    <div className="grid grid-cols-5 gap-4 max-w-5xl mx-auto p-5">
       {catImages.map((image) => (
         <div key={image.id}>
           <img

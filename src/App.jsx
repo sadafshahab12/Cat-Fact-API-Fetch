@@ -1,15 +1,22 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Navbar from "./components/Navbar";
 
-import './App.css'
-import CatFacts from './components/CatFacts'
+import CatFactPage from "./components/pages/CatFact";
+import CatRandomImagePage from "./components/pages/CatRandomImage";
 
 function App() {
-
-
   return (
     <>
-      <CatFacts />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/cat-fact" element={<CatFactPage />} />
+          <Route path="/cat-images" element={<CatRandomImagePage />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
